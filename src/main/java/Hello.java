@@ -6,5 +6,6 @@ public class Hello {
         System.out.println("Sysetem out println");
         System.out.println("public static void main");
         System.out.println("Edit Java Code!!");
+        System.out.println("puss git hub");
     }
 }
