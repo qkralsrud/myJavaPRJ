@@ -9,7 +9,7 @@ public class Ex08_03 {
         dd[0]=100;
         int i;
 
-        System.out.println("aa 몇개 ? : "+aa.length);
+        System.out.println("aa 몇개 ? : "+aa.length);//length 배열의 길이 = 칸의 갯수
         for (i = 0; i < aa.length ; i++)
             System.out.printf("aa[%d] ==> %d\t",i , aa[i]);
         System.out.printf("\n");
