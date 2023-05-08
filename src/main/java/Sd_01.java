@@ -5,28 +5,36 @@ public class Sd_01 {
         Scanner s = new Scanner(System.in);
         List<Map<String, String>> list = new ArrayList<>();
 
-        Map<String, String> map =null;
+        Map<String, String> map1 =new HashMap<>();
+        map1.put("name", "해리포터");
+        map1.put("author", "조앤");
+        map1.put("publisher", "한빞");
 
-        for (int i = 0; i< 3; i++){
-            System.out.print("도서명 : ");
-            String name =s.next();
+        Map<String, String> map2 =new HashMap<>();
+        map2.put("name", "트와일라잇");
+        map2.put("author", "조앤 게인");
+        map2.put("publisher", "준상이정글");
 
-            System.out.print(" 저자 : ");
-            String author =s.next();
+        Map<String, String> map3 =new HashMap<>();
+        map3.put("name", "준상이 서폿");
+        map3.put("author", "조이");
+        map3.put("publisher", "정글차이");
 
-            System.out.print(" 출판사 : ");
-            String publisher = s.next();
+        list.add(map1);
+        list.add(map2);
+        list.add(map3);
 
-            map=new HashMap<>();
-
-            map.put("name", name);
-            map.put("author", author);
-            map.put("publisher", publisher);
-
-            list.add(map);
-
-            map = null;
-        }
-        int listSize= list.size();
+        Integer abc = 0;
+        System.out.println("도서 검색하세요");
+        String search = s.next();
+        list.forEach(title ->
+                {
+                    if (title.get("name").equals(search)) {
+                        System.out.println(title.get("name"));
+                        System.out.println(title.get("author"));
+                        System.out.println(title.get("publisher"));
+                    }
+                }
+        );
     }
 }
